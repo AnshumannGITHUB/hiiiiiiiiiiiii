@@ -1,0 +1,145 @@
+
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Lifestyle App</title>
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: 'Rockwell';
+                        background: linear-gradient(to bottom, #579df4, #c4dcff);
+                        color: #ffffff;
+                        overflow-x: hidden;
+                        position: relative;
+                    }
+            
+                    header {
+                        text-align: center;
+                        padding: 50px;
+                        background: linear-gradient(to bottom, #0071fa, #c4dcff);
+                        color: #fff;
+                    }
+            
+                    .random-squares,
+                    .random-squares2 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        z-index: 0;
+                    }
+            
+                    .random-square,
+                    .random-square2 {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        opacity: 0.7;
+                        border-radius: 3px;
+                        pointer-events: none;
+                        animation: drift 10s linear infinite, collision 0.5s ease infinite alternate;
+                    }
+            
+                    .random-square {
+                        background: #00aaff;
+                    }
+            
+                    .random-square2 {
+                        background: #fcfaff;
+                    }
+                    .small-text {
+            font-size: 36px;
+            color: #fff;
+            background-color: #000; /* Added background color */
+            padding: 15px; /* Adjusted padding for better appearance */
+            display: inline-block; /* Ensures the background only covers the content width */}
+            
+                    @keyframes drift {
+                        from {
+                            transform: translate(0, 0);
+                        }
+                        to {
+                            transform: translate(500px, 500px);
+                        }
+                    }
+            
+                    section {
+                        padding: 35px;
+                        text-align: center;
+                        position: relative;
+                        z-index: 1;
+                    }
+            
+                    h3 {
+                        font-size: 25px;
+                        color: #fff;
+                        background: #161616;
+                    }
+            
+                    .footer {
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                        background: linear-gradient(to right, #161616, #585858);
+                        color: #fff;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                </style>
+            </head>
+            
+            <body>
+            
+                <header>
+                    <h1>ABOUT US AT LIVE-LY!©</h1>
+                    <h2>Everything there is to know about LIVE-LY©!</h2>
+                </header>
+            
+                <section>
+                    <h3 >
+                        In the bustling world of technology, a vision was born—a vision that aimed to embody the idea of emotional vulnerability and ways to help. This vision gave birth to Live-ly, an app that goes above and beyond to grasp the potential to assist someone in need and allow them a safe haven to express themselves with the featured assets.
+                        Live-ly was conceived with a simple yet profound motive: to assist those in need of help emotionally while keeping the vibe neutral. And, the primary goal of Live-ly was to foster an environment, stylistically appealing, to grasp onto and set a neutral yet upbeat tone to calm down a sort of pessimistic cause. In a world with enhancing technology, advancing by the minute, I was able to code an app to solve a real-world issue, the issue of emotional vulnerability. 
+                        The story of Live-ly began with a young individual, by the name of Anshumann KARR, with a bright mindset and a future of coding ahead of him, an idea was concocted. The app's journey was not without its challenges however. Anshumann worked tirelessly and spent hours upon hours on this app in order to make his ideas into reality to his utmost extent. 
+                        As Live-ly gained momentum, its foundations grew in strength. As time went on, the app extended its features and assets in order to further embody the key idea.
+                        Live-ly's story is a testament to the belief that technology and coding, when harnessed with purpose and heart, can bring people’s ideas together and turn ideas into realities in ways unimaginable. Its journey continues, fueled by the ever-growing desire to strengthen its foundations, embody its meaningful ideas, and redefine the way we can assist those in need of help emotionally.
+                
+                </section>
+            
+                <div class="random-squares"></div>
+                <div class="random-squares2"></div>
+            
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const randomSquares = document.querySelector('.random-squares');
+                
+                        for (let i = 0; i < 50; i++) {
+                            const square = document.createElement('div');
+                            square.classList.add('random-square');
+                            square.style.top = Math.random() * 100 + 'vh';
+                            square.style.left = Math.random() * 100 + 'vw';
+                            square.style.animation = 'drift ' + (Math.random() * 10 + 5) + 's linear infinite';
+                            randomSquares.appendChild(square);
+                        }
+            
+                        const randomSquares2 = document.querySelector('.random-squares2');
+                
+                        for (let i = 0; i < 50; i++) {
+                            const square = document.createElement('div');
+                            square.classList.add('random-square2');
+                            square.style.top = Math.random() * 100 + 'vh';
+                            square.style.left = Math.random() * 100 + 'vw';
+                            square.style.animation = 'drift ' + (Math.random() * 10 + 5) + 's linear infinite';
+                            randomSquares2.appendChild(square);
+                        }
+                    });
+                </script>
+            
+                <div class="footer">
+                    <p>2024 LIVE-LY!© All rights reserved</p>
+                </div>
+            
+            </body>
+            
+            </html>
